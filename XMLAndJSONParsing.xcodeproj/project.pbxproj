@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3110DCE5193F664300938665 /* PJSONObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3110DCE4193F664200938665 /* PJSONObject.m */; };
+		3110DCE8193F6E6F00938665 /* PXMLMainService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3110DCE7193F6E6F00938665 /* PXMLMainService.m */; };
+		3110DCEB193F714800938665 /* PJSONMainService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3110DCEA193F714800938665 /* PJSONMainService.m */; };
 		AD7DB561F3F842A2868940AD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A0213B27ECD43378D1F02C7 /* libPods.a */; };
 		D3CC31E2193B62AD0022F18F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CC31E1193B62AD0022F18F /* Foundation.framework */; };
 		D3CC31E4193B62AD0022F18F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3CC31E3193B62AD0022F18F /* CoreGraphics.framework */; };
@@ -38,6 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3110DCE3193F664200938665 /* PJSONObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJSONObject.h; sourceTree = "<group>"; };
+		3110DCE4193F664200938665 /* PJSONObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJSONObject.m; sourceTree = "<group>"; };
+		3110DCE6193F6E6F00938665 /* PXMLMainService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXMLMainService.h; sourceTree = "<group>"; };
+		3110DCE7193F6E6F00938665 /* PXMLMainService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXMLMainService.m; sourceTree = "<group>"; };
+		3110DCE9193F714800938665 /* PJSONMainService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJSONMainService.h; sourceTree = "<group>"; };
+		3110DCEA193F714800938665 /* PJSONMainService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJSONMainService.m; sourceTree = "<group>"; };
 		4A0213B27ECD43378D1F02C7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3CC31DE193B62AD0022F18F /* XMLAndJSONParsing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMLAndJSONParsing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3CC31E1193B62AD0022F18F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,13 +101,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3110DCEC193F771700938665 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3110DCED193F773100938665 /* XMLService */,
+				3110DCEE193F775C00938665 /* JSONService */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		3110DCED193F773100938665 /* XMLService */ = {
+			isa = PBXGroup;
+			children = (
+				3110DCE6193F6E6F00938665 /* PXMLMainService.h */,
+				3110DCE7193F6E6F00938665 /* PXMLMainService.m */,
+				D3CC3215193B66C90022F18F /* XMLService.h */,
+				D3CC3216193B66C90022F18F /* XMLService.m */,
+			);
+			name = XMLService;
+			sourceTree = "<group>";
+		};
+		3110DCEE193F775C00938665 /* JSONService */ = {
+			isa = PBXGroup;
+			children = (
+				3110DCE9193F714800938665 /* PJSONMainService.h */,
+				3110DCEA193F714800938665 /* PJSONMainService.m */,
+				D3CC321B193B85920022F18F /* PJSONParser.h */,
+				D3CC321C193B85920022F18F /* PJSONParser.m */,
+			);
+			name = JSONService;
+			sourceTree = "<group>";
+		};
 		D3CC31D5193B62AD0022F18F = {
 			isa = PBXGroup;
 			children = (
-				D3CC321B193B85920022F18F /* PJSONParser.h */,
-				D3CC321C193B85920022F18F /* PJSONParser.m */,
-				D3CC3215193B66C90022F18F /* XMLService.h */,
-				D3CC3216193B66C90022F18F /* XMLService.m */,
+				3110DCEC193F771700938665 /* Services */,
+				3110DCE3193F664200938665 /* PJSONObject.h */,
+				3110DCE4193F664200938665 /* PJSONObject.m */,
 				D3CC3218193B754B0022F18F /* PXMLFeed.h */,
 				D3CC3219193B754B0022F18F /* PXMLFeed.m */,
 				D3CC3210193B66780022F18F /* XMLViewController.h */,
@@ -306,7 +345,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3CC31EE193B62AD0022F18F /* main.m in Sources */,
+				3110DCEB193F714800938665 /* PJSONMainService.m in Sources */,
+				3110DCE5193F664300938665 /* PJSONObject.m in Sources */,
 				D3CC3217193B66C90022F18F /* XMLService.m in Sources */,
+				3110DCE8193F6E6F00938665 /* PXMLMainService.m in Sources */,
 				D3CC31F2193B62AD0022F18F /* PAppDelegate.m in Sources */,
 				D3CC321D193B85920022F18F /* PJSONParser.m in Sources */,
 				D3CC321A193B754B0022F18F /* PXMLFeed.m in Sources */,
